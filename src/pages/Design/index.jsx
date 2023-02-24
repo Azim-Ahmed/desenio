@@ -646,6 +646,7 @@ const Design = () => {
             </div>
           </div>
           <div
+            className=" background__css"
             style={{
               background: `url(${
                 mainPreview.preview
@@ -654,10 +655,7 @@ const Design = () => {
               }) no-repeat`,
               width: "100%",
               height: "100%",
-              position: "relative",
-              backgroundSize: "cover",
               transition: "background-image .2s ease-in",
-              backgroundPosition: "center",
             }}
           ></div>
         </div>
