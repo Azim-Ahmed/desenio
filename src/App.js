@@ -96,7 +96,8 @@ function App() {
         <ToastArea />
         {/* <AuthNavbar /> */}
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/" element={<Design />} />
+          {/* <Route path="/" element={<Navigate to="/login" />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/design" element={<Design />} />
           <Route path="/register" element={<Register />} />
