@@ -2,6 +2,8 @@ import Button from "components/Reusable/Button";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { SelectSideBar } from "components/Design";
+import Draggable from "react-draggable";
+import DraggableOverlay from "components/Design/Draggable";
 /**
  *@function App.jsx
  *@author Azim
@@ -10,6 +12,7 @@ import { SelectSideBar } from "components/Design";
 const Design = () => {
   const [sidebarChanges, setSidebarChanges] = useState(0);
   const [mainPreview, setMainPreview] = useState({});
+  const [pictureWall, setPictureWall] = useState({});
   const sidebarData = [
     {
       logo: "ic:outline-photo-size-select-actual",
@@ -323,6 +326,23 @@ const Design = () => {
       });
     }
   };
+  const handleSelectDimentionItem = (item, items) => {
+    setPictureWall(item);
+    console.log({ item });
+    // if (!items) {
+    //   setMainPreview({
+    //     id: item.id,
+    //     preview: item.images[0].image,
+    //     previewId: item.images[0].previewId,
+    //   });
+    // } else {
+    //   setMainPreview({
+    //     id: item.id,
+    //     preview: items.image,
+    //     previewId: items.previewId,
+    //   });
+    // }
+  };
   return (
     <section
       style={{
@@ -467,7 +487,7 @@ const Design = () => {
                             transition: "color .25s ease",
                             position: "relative",
                           }}
-                          onClick={() => handleSelectItem(item)}
+                          onClick={() => handleSelectDimentionItem(item)}
                         >
                           <img src={item.preview} alt="oof" />
                         </div>
@@ -645,6 +665,7 @@ const Design = () => {
               </p>
             </div>
           </div>
+
           <div
             className=" background__css"
             style={{
@@ -657,7 +678,44 @@ const Design = () => {
               height: "100%",
               transition: "background-image .2s ease-in",
             }}
-          ></div>
+          >
+            {pictureWall.gridItems && (
+              <DraggableOverlay>
+                <div className="flex gap-6">
+                  <div
+                    style={{
+                      height: "286px",
+                      width: "204px",
+                      zIndex: 11,
+                      boxShadow: "0 0 0.8rem rgba(0, 0, 0, 0.5)",
+                      transition: "transform 0.2s ease-in-out",
+                      backgroundColor: "#cececece",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    50X70
+                  </div>{" "}
+                  <div
+                    style={{
+                      height: "286px",
+                      width: "204px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      zIndex: 11,
+                      boxShadow: "0 0 0.8rem rgba(0, 0, 0, 0.5)",
+                      transition: "transform 0.2s ease-in-out",
+                      backgroundColor: "#cececece",
+                    }}
+                  >
+                    50X70
+                  </div>
+                </div>
+              </DraggableOverlay>
+            )}
+          </div>
         </div>
       </div>
     </section>
