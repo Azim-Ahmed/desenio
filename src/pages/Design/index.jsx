@@ -651,7 +651,7 @@ const Design = () => {
               background: `url(${
                 mainPreview.preview
                   ? mainPreview.preview
-                  : "https://gwt.desenio.com/backgrounds/6-blue.jpg"
+                  : "https://gwt.desenio.com/general/welcome-bg.jpg"
               }) no-repeat`,
               width: "100%",
               height: "100%",
