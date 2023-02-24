@@ -1,0 +1,14 @@
+.story-gallery {
+  padding-right: 10px;
+}
+
+.story-gallery:nth-child(5n + 5) {
+  padding-right: 20px;
+}
+
+/* .story-gallery .slick-prev {
+  left: -25px !important;
+}
+.story-gallery .slick-next {
+  right: -0px !important;
+} */

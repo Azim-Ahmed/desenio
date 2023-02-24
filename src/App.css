@@ -1,0 +1,36 @@
+* {
+  padding:0;
+  margin:0;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 12px;
+  background: #000000; 
+}  
+
+/* Track */
+::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: #bec4c4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html, body { 
+  box-sizing: border-box;
+  overflow-x: hidden;  
+}
+
+body{
+  /* font-family: 'Tajawal', sans-serif;  */
+  font-family: "Google Sans Display",Roboto,Arial,sans-serif; 
+  background-color: #F8F8F8 ;
+  
+}

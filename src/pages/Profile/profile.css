@@ -1,0 +1,4 @@
+.activity-graph {
+  grid-template-columns: auto 1fr minmax(40px, auto);
+  gap: 10px;
+}
