@@ -529,7 +529,7 @@ const Design = () => {
                   </div>
                 </>
               )}
-              {sidebarChanges === 3 && (
+              {/* {sidebarChanges === 3 && (
                 <>
                   <div>
                     <SelectSideBar
@@ -588,7 +588,7 @@ const Design = () => {
                     </div>
                   </div>
                 </>
-              )}
+              )} */}
             </div>
             {sidebarChanges === 0 && (
               <div>
@@ -682,36 +682,23 @@ const Design = () => {
             {pictureWall.gridItems && (
               <DraggableOverlay>
                 <div className="flex gap-6">
-                  <div
-                    style={{
-                      height: "286px",
-                      width: "204px",
-                      zIndex: 11,
-                      boxShadow: "0 0 0.8rem rgba(0, 0, 0, 0.5)",
-                      transition: "transform 0.2s ease-in-out",
-                      backgroundColor: "#cececece",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    50X70
-                  </div>{" "}
-                  <div
-                    style={{
-                      height: "286px",
-                      width: "204px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      zIndex: 11,
-                      boxShadow: "0 0 0.8rem rgba(0, 0, 0, 0.5)",
-                      transition: "transform 0.2s ease-in-out",
-                      backgroundColor: "#cececece",
-                    }}
-                  >
-                    50X70
-                  </div>
+                  {pictureWall.ratios.map((item) => (
+                    <div
+                      style={{
+                        height: "286px",
+                        width: "204px",
+                        zIndex: 11,
+                        boxShadow: "0 0 0.8rem rgba(0, 0, 0, 0.5)",
+                        transition: "transform 0.2s ease-in-out",
+                        backgroundColor: "#cececece",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      {item}
+                    </div>
+                  ))}
                 </div>
               </DraggableOverlay>
             )}
