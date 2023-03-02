@@ -7,6 +7,5 @@
 ### use ` npm install` or ` yarn ` or ` pnpm install` to install the dependencies.
 
 ### use figma for design references
-
 ## Figma design
 https://gwt.desenio.com/#/
