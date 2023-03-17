@@ -8,4 +8,4 @@
 
 ### use figma for design references
 ## Figma design
-https://gwt.desenio.com/#/
+https://gwt.desenio.com/#
